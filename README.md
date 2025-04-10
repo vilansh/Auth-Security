@@ -4,6 +4,75 @@ A secure authentication system using **Node.js, Express, MySQL, bcrypt, and envi
 
 ---
 
+## Installation
+
+### Prerequisites
+- Node.js
+- MySQL server
+
+### Setup
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/auth-todo-list-handler.git
+   cd auth-todo-list-handler
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Create `.env` file:**
+   ```env
+   DB_HOST=localhost
+   DB_PORT=3306
+   DB_USER=root
+   DB_PASSWORD=yourpassword
+   DB=yourdatabasename
+   PORT=3000
+   ```
+
+4. **Create the required table in your MySQL database:**
+   ```sql
+   CREATE TABLE users (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     username VARCHAR(255) NOT NULL,
+     password VARCHAR(255) NOT NULL
+   );
+   ```
+
+5. **Run the server:**
+   ```sh
+   npm start
+   ```
+
+6. Open your browser and go to:
+   ```sh
+   http://localhost:3000
+   ```
+
+## Project Structure
+```
+├── public          # Static files (CSS, JS)
+├── views           # EJS Templates
+│   ├── home.ejs
+│   ├── login.ejs
+│   ├── register.ejs
+│   ├── secrets.ejs
+├── .env            # Environment variables
+├── app.js          # Main application file
+├── package.json    # Project metadata
+└── README.md       # Project documentation
+```
+
+## Routes
+### Public Routes
+- `GET /` → Home page
+- `GET /login` → Login form
+- `GET /register` → Registration form
+
+
+
 ## 🚀 Features
 ✅ **User Registration & Login** with Hashed Passwords  
 ✅ **bcrypt for Hashing & Salting Passwords**  
@@ -168,3 +237,5 @@ This project is open-source and free to use under the **MIT License**.
 ## 🚀 **Contribute**
 Feel free to contribute by submitting **issues** or **pull requests**!  
 💡 **Want to improve security?** Implement JWT authentication or OAuth.
+
+
