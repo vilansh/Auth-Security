@@ -118,5 +118,5 @@ app.get("/register", (req,res)=>{
 
 
 app.listen(process.env.PORT, function(){
-    console.log("server is up and running")
+    console.log("server is up at 3000 and running")
 })
